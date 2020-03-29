@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
+import Main from './Components/Main';
+import MenuItems from './Components/MenuItems';
 
 
 class App extends React.Component {
@@ -18,8 +20,8 @@ class App extends React.Component {
             <div className="App">
                 <Navbar />
                 <Header />
-                {/* <Main.js />   */}
-                {/* <MenuItems /> */}
+                <Main />  
+                <MenuItems />
 
             </div>
         );
