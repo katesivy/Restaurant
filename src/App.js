@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import Main from './Components/Main';
 import MenuItems from './Components/MenuItems';
+import Footer from './Components/Footer';
 
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
                 <Header />
                 <Main />  
                 <MenuItems />
+                <Footer />
 
             </div>
         );
