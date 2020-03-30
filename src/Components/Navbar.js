@@ -13,7 +13,7 @@ import React from "react";
   render() {
     return (
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <a className="navbar-brand" href="#">Restaurant Title/logo</a>
+  <a className="navbar-brand" href="#"><h1 className="display-4">Kate's Kitchen</h1></a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>

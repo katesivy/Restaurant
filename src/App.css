@@ -1,17 +1,14 @@
-/* .jumbotron {
-  background-image: url("https://images.pexels.com/photos/4239/restaurant-drink-colorful-colourful.jpg?cs=srgb&dl=restaurant-drink-colorful-colourful-4239.jpg&fm=jpg");
-} */
 
-/* div #card1 {
-  width: 18rem;
-} */
 
-div #headerbox {
-  /* margin-left: 0;
-  margin-right: 0; */
+.navbar-brand {
+  font-family: cursive;
+
 }
 
 div #pic1 {
-  height: 400px;
-  
+  height: 600px;
+}
+
+#menu-section {
+  font-family: cursive;
 }
