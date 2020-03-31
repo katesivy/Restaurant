@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 import Main from './Components/Main';
-import MenuItems from './Components/MenuItems';
-import Footer from './Components/Footer';
+import Menu from './Components/Menu';
+import Sides from './Components/Sides';
+// import Footer from './Components/Footer';
 
 
 class App extends React.Component {
@@ -19,11 +20,12 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <Navbar />
+                {/* <Navbar /> */}
                 <Header />
                 <Main />  
-                <MenuItems />
-                <Footer />
+                <Menu />
+                <Sides />
+                {/* <Footer /> */}
 
             </div>
         );

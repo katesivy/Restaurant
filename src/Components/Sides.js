@@ -1,7 +1,7 @@
 import React from "react";
 
 
-class MenuItems extends React.Component {
+class Sides extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -13,86 +13,112 @@ class MenuItems extends React.Component {
     render() {
         return (
             <>
+               
+               
 
-                <div class="row offset-2">
-                    <div class="col-sm-5 ">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Menu Item</h5>
-                                <p class="card-text">Ingredients</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="card ">
-                            <div class="card-body">
-                                <h5 class="card-title">Menu Item</h5>
-                                <p class="card-text">Ingredients:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row offset-2">
-                    <div class="col-sm-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Menu Item</h5>
-                                <p class="card-text">Ingredients</p>
+                {/* <div className="row offset-2">
+                    <div className="col-sm-5 ">
+                        <div className="card">
+                            <div className="card-body">
+                                <h5 className="card-title">Menu Item</h5>
+                                <p className="card-text">Ingredients</p>
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="card ">
-                            <div class="card-body">
-                                <h5 class="card-title">Menu Item</h5>
-                                <p class="card-text">Ingredients:</p>
+                    <div className="col-sm-5">
+                        <div className="card ">
+                            <div className="card-body">
+                                <h5 className="card-title">Menu Item</h5>
+                                <p className="card-text">Ingredients:</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="card text-center">
+                    <div className="card-header">
+                        <div className="card-body">
+                            <h2 className="card-title ">Soups & Salads</h2>
+                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-                <div class="row offset-2">
-                    <div class="col-sm-5 ">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Menu Item</h5>
-                                <p class="card-text">Ingredients</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row offset-2">
+                    <div className="col-sm-5">
+                        <div className="card">
+                            <div className="card-body">
+                                <h5 className="card-title">Menu Item</h5>
+                                <p className="card-text">Ingredients</p>
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="card ">
-                            <div class="card-body">
-                                <h5 class="card-title">Menu Item</h5>
-                                <p class="card-text">Ingredients:</p>
+                    <div className="col-sm-5">
+                        <div className="card ">
+                            <div className="card-body">
+                                <h5 className="card-title">Menu Item</h5>
+                                <p className="card-text">Ingredients:</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="card text-center">
+                    <div className="card-header">
+                        <div className="card-body">
+                            <h2 className="card-title">Sides</h2>
+                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-                <div class="row offset-2">
-                    <div class="col-sm-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Menu Item</h5>
-                                <p class="card-text">Ingredients</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row offset-2">
+                    <div className="col-sm-5">
+                        <div className="card">
+                            <div className="card-body">
+                                <h5 className="card-title">Menu Item</h5>
+                                <p className="card-text">Ingredients</p>
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="card ">
-                            <div class="card-body">
-                                <h5 class="card-title">Menu Item</h5>
-                                <p class="card-text">Ingredients:</p>
+                    <div className="col-sm-5">
+                        <div className="card ">
+                            <div className="card-body">
+                                <h5 className="card-title">Menu Item</h5>
+                                <p className="card-text">Ingredients:</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="card text-center">
+                    <div className="card-header">
+                        <div className="card-body">
+                            <h2 className="card-title ">Desserts</h2>
+                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div className="row offset-2">
+                    <div className="col-sm-5">
+                        <div className="card">
+                            <div className="card-body">
+                                <h5 className="card-title">Menu Item</h5>
+                                <p className="card-text">Ingredients</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-5">
+                        <div className="card ">
+                            <div className="card-body">
+                                <h5 className="card-title">Menu Item</h5>
+                                <p className="card-text">Ingredients:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
 
 
 
@@ -106,7 +132,7 @@ class MenuItems extends React.Component {
 
 }
 
-export default MenuItems;
+export default Sides;
 
 /* <div className="card text-center">
                    <div className="card-header">
