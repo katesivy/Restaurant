@@ -1,6 +1,5 @@
 import React from "react";
-// import Pictures from "./Components/Pictures";
-// import smoothies.jpg from '.Components/smoothies.jpg';
+// import $ from "jquery";
 
 
 class Main extends React.Component {
@@ -10,7 +9,20 @@ class Main extends React.Component {
 
         };
     }
+// set up axios fetch--then/catch/finally
+// const axios = require('axios').default;
+// axios.get({params: ID: userid})
+// .then(function(response){console.log(response)})
+// .catch(function(error){console.log(error)})
+// .finally(function(){})
 
+// set up DidMount function to set local storage
+
+// set up array for menuItems
+// map((menuItems) => up to 5/8/12 times
+// set up additional array for 3 more menuItems in section15
+
+// set up array for prices
 
     render() {
         return (
@@ -53,10 +65,10 @@ class Main extends React.Component {
 
 
                      
-  {/* function Nav() {
+   {/* function Nav() {
     {`$('#myTab li:last-child a').tab('show')`}
-  }) */}
-  {/* <script><Nav /></script>   */}
+  }) 
+ <script><Nav /></script>    */}
                
 
                 
@@ -72,7 +84,3 @@ class Main extends React.Component {
 }
 
 export default Main;
-
-// https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&auto=format&fit=crop&w=3289&q=80
-
-// https://images.unsplash.com/photo-1525193612562-0ec53b0e5d7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80
