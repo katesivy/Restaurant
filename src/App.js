@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header';
-// import Navbar from './Components/Navbar';
+//  import Navbar from './Components/Navbar';
 import Main from './Components/Main';
 import Menu from './Components/Menu';
 import Sides from './Components/Sides';

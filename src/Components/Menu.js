@@ -7,16 +7,13 @@ class Menu extends React.Component {
         this.state = {
             menuArray: [],
             price: [],
-            number: '',
+            number: 12,
             title: '',
             description: ''
 
         };
-        this.getItems = this.getItems.bind(this);
+        // this.getItems = this.getItems.bind(this);
     }
-
-
-
 
     // fetchMenu(number) {
     //     for (let i = 0; i < number; i++) {
@@ -24,27 +21,31 @@ class Menu extends React.Component {
     //     }
     // }
 
-    // async componentDidMount() {
-    //     console.log('component mounted')
-    //     if (window.localStorage != []) {
-    //         let storage = JSON.parse(localStorage.getItem('localMenuItems'))
-    //         await this.setState({
-    //             menuArray: storage
-    //         });
-    //     } else {
-    //         this.getItems(this.props.number)
-    //     }
-    // }
 
+    // use local storage to populate menu
+    async componentDidMount() {
+           if (window.localStorage === []) {
+            this.getItems(this.props.number)
+          } else {
+             console.log('local storage working')
+             console.log(this.menuArray)
+            let storage = JSON.parse(localStorage.getItem('localMenuItems'))
+        await this.setState({
+                 menuArray: storage
+             });
+           }
+     }
 
     // set local storage
     componentDidUpdate() {
         window.localStorage.setItem('localMenuItems', JSON.stringify(this.state.menuArray));
 
     }
-
+    
+    // api call to populate menu array
     async getItems(number) {
-        let result = await axios.get("https://entree-f18.herokuapp.com/v1/menu/" + number)
+        
+        let result = await axios.get("https://entree-f18.herokuapp.com/v1/menu/12" + number)
             .then(function (response) {
                 console.log('response')
                 let array = response.data.menu_items;
@@ -62,20 +63,10 @@ class Menu extends React.Component {
     }
 
 
-    // map over array and return <> for each 
-    // *get items on page
     // pass/set props for each component
-    // set local storage after each component is finished with its api calls
+    
     // use a spinner on each component while it renders axios
 
-
-    // function Map() {
-    // let menuItems = this.state.menuArray.map((item) => {
-
-    //     return item;
-    // });
-    // return menuItems;
-    // }
     render() {
 
         const menuItems = this.state.menuArray.map((item, index) => {
@@ -97,20 +88,6 @@ class Menu extends React.Component {
             return menuItems;
         };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // 
 
 
 
@@ -138,15 +115,6 @@ class Menu extends React.Component {
                         <div className="card ">
                             <div className="card-body">
                                 {/* <h5 className="card-title">Menu Item</h5> */}
-
-
-
-
-
-
-
-
-
 
 
 
