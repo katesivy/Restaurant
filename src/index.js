@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/collapse.min.js';
-// import $ from "jquery";
+import $ from "jquery";
 // import Popper from "popper.js";
 
 
