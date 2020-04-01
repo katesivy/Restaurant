@@ -2,16 +2,21 @@ import React from "react";
 
 function MenuItem(props) {
     return (
-    <div className="card text-center">
-        <div className="card-header">
-            <div className="card-body">
-                
-                <p className="card-text">{props.description + " $10.99"}</p>
+        <div className="card text-center" id="Home"  >
+            <div className="card-header" id="Location" >
+                <div className="card-body" id="Contact">
 
+                    <p className="card-text">
+                        {props.description}
+                        {props.price}
+                        </p>
+
+                </div>
             </div>
         </div>
-    </div>
     )
 }
+
+
 
 export default MenuItem;
