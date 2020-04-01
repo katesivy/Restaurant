@@ -1,4 +1,5 @@
 import React from "react";
+import MenuItem from './MenuItem';
 const axios = require('axios').default;
 
 class Menu extends React.Component {
@@ -6,46 +7,39 @@ class Menu extends React.Component {
         super();
         this.state = {
             menuArray: [],
-            price: [],
-            number: 12,
-            title: '',
-            description: ''
-
         };
-        // this.getItems = this.getItems.bind(this);
     }
 
-    // fetchMenu(number) {
-    //     for (let i = 0; i < number; i++) {
-    //         this.getItems()
-    //     }
-    // }
+    fetchMenuItems(number) {
+        for (let i = 0; i < number; i++) {
+            this.getItems()
+        }
+    }
 
 
     // use local storage to populate menu
     async componentDidMount() {
-           if (window.localStorage === []) {
+        if (window.localStorage.length === 0) {
             this.getItems(this.props.number)
-          } else {
-             console.log('local storage working')
-             console.log(this.menuArray)
+        } else {
+            console.log('local storage working')
+            console.log(this.menuArray)
             let storage = JSON.parse(localStorage.getItem('localMenuItems'))
-        await this.setState({
-                 menuArray: storage
-             });
-           }
-     }
+            await this.setState({
+                menuArray: storage
+            });
+        }
+    }
 
     // set local storage
     componentDidUpdate() {
         window.localStorage.setItem('localMenuItems', JSON.stringify(this.state.menuArray));
 
     }
-    
+
     // api call to populate menu array
     async getItems(number) {
-        
-        let result = await axios.get("https://entree-f18.herokuapp.com/v1/menu/12" + number)
+        let result = await axios.get("https://entree-f18.herokuapp.com/v1/menu/" + number)
             .then(function (response) {
                 console.log('response')
                 let array = response.data.menu_items;
@@ -62,36 +56,33 @@ class Menu extends React.Component {
         await this.setState({ menuArray: result });
     }
 
-
-    // pass/set props for each component
-    
-    // use a spinner on each component while it renders axios
-
     render() {
 
         const menuItems = this.state.menuArray.map((item, index) => {
-            return <div key={index}>
-                <div className="card text-center">
-                    <div className="card-header">
-                        <div className="card-body">
-                            {/* <h2 className="card-title ">Mains</h2> */}
-                            <p className="card-text">{item.description}</p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            return <MenuItem key={index} description={item.description} />
         });
         if (this.state.menuArray.length === 0) {
             return null;
         } else {
-            return menuItems;
+            return (
+                <>
+                   <h4 className="card-title text-center p-3">{this.props.menuType}</h4> 
+                    {menuItems}
+                </>
+            )
         };
+    }
+
+}
+
+export default Menu;
 
 
 
 
-        {/* <div className="card text-center">
+
+
+{/* <div className="card text-center">
                     <div className="card-header">
                         <div className="card-body">
                             <h2 className="card-title">Appetizers</h2>
@@ -106,7 +97,7 @@ class Menu extends React.Component {
                             <div className="card-body">
                                 {/* <h5 className="card-title">Menu Item</h5> */}
 
-        {/* <p className="card-text"><a></a></p>
+{/* <p className="card-text"><a></a></p>
 
                             </div>
                         </div>
@@ -117,9 +108,3 @@ class Menu extends React.Component {
                                 {/* <h5 className="card-title">Menu Item</h5> */}
 
 
-
-    }
-
-}
-
-export default Menu;
