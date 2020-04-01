@@ -15,6 +15,16 @@ class Sides extends React.Component {
             <>
                
                
+/* <div className="card text-center">
+                    <div className="card-header">
+                        <div className="card-body">
+                            <h2 className="card-title">Appetizers</h2>
+                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                        </div>
+                    </div>
+                </div>*/
+               
 
                 {/* <div className="row offset-2">
                     <div className="col-sm-5 ">
