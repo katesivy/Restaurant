@@ -13,14 +13,16 @@ class Footer extends React.Component {
         return (
 
             <>
-             <div className="card text-center">
-                        <div className="card-header">
-                            <div className="card-body">
-                                <h5 className="card-title">FOOTER</h5>
-                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
+             <div className=" text-center">
+                        {/* <div className="card-header">
+                            <div className="card-body"> */}
+                                <h5 className="card-title" id="Location">Location</h5>
+                                <p className="card-text">
+                                348 E Main St</p>
+                                <p>Lexington, KY 40502</p>
+                                <a href="#" className="btn btn-primary" id="Contact">Map</a>
+                            {/* </div>
+                        </div> */}
                     </div>
 
 
@@ -33,4 +35,4 @@ class Footer extends React.Component {
 
 }
 
-// export default Footer;
+export default Footer;

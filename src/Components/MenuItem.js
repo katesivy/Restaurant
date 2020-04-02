@@ -2,17 +2,17 @@ import React from "react";
 
 function MenuItem(props) {
     return (
-        <div className="card text-center" id="Home"  >
-            <div className="card-header" id="Location" >
-                <div className="card-body" id="Contact">
+        <div className="card text-center"   >
+            {/* <div className="card-header"  > */}
+                <div className="card-body" >
 
                     <p className="card-text">
                         {props.description}
-                        {props.price}
+                       <a> {props.price}</a>
                         </p>
 
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     )
 }
