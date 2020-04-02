@@ -1,6 +1,5 @@
 import React from "react";
 import MenuItem from './MenuItem';
-// import MenuPrice from './MenuPrice';
 const axios = require('axios').default;
 
 class Menu extends React.Component {
@@ -8,20 +7,15 @@ class Menu extends React.Component {
         super();
         this.state = {
             menuArray: [],
-
         };
     }
-
-
-
 
     // use local storage to populate menu
     async componentDidMount() {
         if (window.localStorage.length === 0) {
             this.getItems(this.props.menuNumber)
         } else {
-            console.log('local storage working')
-            console.log(this.menuArray)
+            console.log('local storage')
             let storage = JSON.parse(localStorage.getItem(this.props.menuAlias))
             await this.setState({
                 menuArray: storage
@@ -34,8 +28,6 @@ class Menu extends React.Component {
         window.localStorage.setItem(this.props.menuAlias, JSON.stringify(this.state.menuArray));
 
     }
-
-
 
     // api call to populate menu array
     async getItems(menuNumber) {
@@ -60,18 +52,18 @@ class Menu extends React.Component {
         console.log(result);
 
         // if result # === props #
-         // else getItems for # - result, append remaining
+        // else getItems for # - result, append remaining
         // if (result === menuNumber) {
-            await this.setState
+        await this.setState
             ({ menuArray: result });
         // } else {
         //     let difference = MenuNumber - result;
         //     let differenceArray = axios.get("https://entree-f18.herokuapp.com/v1/menu/" + difference);
         //     // console.log(differenceArray)
         //     return differenceArray;
-           
+
         // }
-       
+
     }
 
 
@@ -80,7 +72,7 @@ class Menu extends React.Component {
 
         const menuItems = this.state.menuArray.map((item, index) => {
             return <>
-                <MenuItem key={index} description={item.description} price={item.price} />
+                <MenuItem key={index} description={item.description} price={` $${item.price}`} />
 
             </>
         });
@@ -105,4 +97,3 @@ class Menu extends React.Component {
 export default Menu;
 
 
-               
