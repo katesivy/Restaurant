@@ -35,7 +35,7 @@ class Menu extends React.Component {
             .then(function (response) {
                 console.log('response')
 
-                let array = response.data.menu_items.map((item, index) => {
+                let array = response.data.menu_items.map((item) => {
                     let price = Math.floor((Math.random() * 20) + 1);
                     item.price = price;
                     return item;
