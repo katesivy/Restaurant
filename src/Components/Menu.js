@@ -12,13 +12,16 @@ class Menu extends React.Component {
 
     // use local storage to populate menu
     async componentDidMount() {
-        if (window.localStorage.length === 0) {
-            this.getItems(this.props.menuNumber)
+        let storage = localStorage.getItem(this.props.menuAlias)
+        if (storage === null) {
+            await this.getItems(this.props.menuNumber)
+            if (this.props.menuNumber > 12) {
+                await this.getItems(this.props.menuNumber - 12);
+            } 
         } else {
             console.log('local storage')
-            let storage = JSON.parse(localStorage.getItem(this.props.menuAlias))
             await this.setState({
-                menuArray: storage
+                menuArray: JSON.parse(storage)
             });
         }
     }
@@ -26,7 +29,6 @@ class Menu extends React.Component {
     // set local storage
     componentDidUpdate() {
         window.localStorage.setItem(this.props.menuAlias, JSON.stringify(this.state.menuArray));
-
     }
 
     // api call to populate menu array
@@ -34,7 +36,6 @@ class Menu extends React.Component {
         let result = await axios.get("https://entree-f18.herokuapp.com/v1/menu/" + menuNumber)
             .then(function (response) {
                 console.log('response')
-
                 let array = response.data.menu_items.map((item) => {
                     let price = Math.floor((Math.random() * 20) + 1);
                     item.price = price;
@@ -51,29 +52,21 @@ class Menu extends React.Component {
             });
         console.log(result);
 
-        // if result # === props #
-        // else getItems for # - result, append remaining
-        // if (result === menuNumber) {
+        let tempArray = this.state.menuArray;
+        for (let i=0; i < result.length; i++) {
+            tempArray.push(result[i]);
+        }
+            
         await this.setState
-            ({ menuArray: result });
-        // } else {
-        //     let difference = MenuNumber - result;
-        //     let differenceArray = axios.get("https://entree-f18.herokuapp.com/v1/menu/" + difference);
-        //     // console.log(differenceArray)
-        //     return differenceArray;
-
-        // }
-
+            ({ menuArray: tempArray });  
     }
 
 
-
     render() {
-
+     
         const menuItems = this.state.menuArray.map((item, index) => {
             return <>
                 <MenuItem key={index} description={item.description} price={` $${item.price}`} />
-
             </>
         });
         if (this.state.menuArray.length === 0) {
@@ -86,7 +79,6 @@ class Menu extends React.Component {
 
                     </h4>
                     {menuItems}
-
                 </>
             )
         };
