@@ -9,9 +9,11 @@ div #pic1 {
   height: 600px;
 }
 
+a#menu-section {
+  width: 200px;
+} 
 
 a {
-  /* font-family: cursive; */
   font-weight: normal;
   
 }

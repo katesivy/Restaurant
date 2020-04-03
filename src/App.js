@@ -17,30 +17,35 @@ class App extends React.Component {
                 number: 5,
                 alias: 'appetizers',
                 id: 'appetizers',
+                href: '#appetizers'
             },
             {
                 name: 'Mains',
                 number: 50,
                 alias: 'mains',
-                id: 'mains'
+                id: 'mains',
+                href: '#mains'
             },
             {
                 name: 'Soups & Salads',
                 number: 3,
                 alias: 'soups',
-                id: 'soups'
+                id: 'soups',
+                href: '#soups'
             },
             {
                 name: 'Sides',
                 number: 5,
                 alias: 'sides',
-                id: 'sides'
+                id: 'sides',
+                href: '#sides'
             },
             {
                 name: 'Desserts',
                 number: 5,
                 alias: 'desserts',
-                id: 'desserts'
+                id: 'desserts',
+                href: '#desserts'
             }
         ] 
         };

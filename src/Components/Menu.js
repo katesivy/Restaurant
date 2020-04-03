@@ -17,7 +17,7 @@ class Menu extends React.Component {
             await this.getItems(this.props.menuNumber)
             if (this.props.menuNumber > 12) {
                 await this.getItems(this.props.menuNumber - 12);
-            } 
+            }
         } else {
             console.log('local storage')
             await this.setState({
@@ -53,17 +53,17 @@ class Menu extends React.Component {
         console.log(result);
 
         let tempArray = this.state.menuArray;
-        for (let i=0; i < result.length; i++) {
+        for (let i = 0; i < result.length; i++) {
             tempArray.push(result[i]);
         }
-            
+
         await this.setState
-            ({ menuArray: tempArray });  
+            ({ menuArray: tempArray });
     }
 
 
     render() {
-     
+
         const menuItems = this.state.menuArray.map((item, index) => {
             return <>
                 <MenuItem key={index} description={item.description} price={` $${item.price}`} />
@@ -74,9 +74,8 @@ class Menu extends React.Component {
         } else {
             return (
                 <>
-                    <h4 className="card-title text-center p-3">
+                    <h4 className="card-title text-center p-3" id={this.props.id}>
                         {this.props.menuType}
-
                     </h4>
                     {menuItems}
                 </>

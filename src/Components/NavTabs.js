@@ -3,7 +3,7 @@ import React from "react";
 function NavTabs(props) {
     return (
         <>
-               <div className="row text-center mx-auto">
+               <div className="row justify-content-center text-center mx-auto">
                 {/* <div className="col-12  text-center mx-auto">
                 </div>  */}
 
@@ -12,8 +12,8 @@ function NavTabs(props) {
                    
                         <ul className="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                             <li className="nav-item">
-                                <a className="nav-link active" href="{item.id}" id="menu-section" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">
-                                    <h4 key={index} id={item.id} >
+                                <a className="nav-link active border border-dark" href={item.href} id="menu-section" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">
+                                    <h4 key={index}  >
                                         {item.name} </h4>
                                 </a>
                             </li>
@@ -25,7 +25,7 @@ function NavTabs(props) {
 
 
 
-            {/* <ul className="nav nav-tabs">
+            {/* { <ul className="nav nav-tabs">
                 <li className="nav-item">
                     <a className="nav-link text-dark" data-toggle="tab" href="#appetizers"><h5>Appetizers</h5></a>
                 </li>
@@ -42,7 +42,7 @@ function NavTabs(props) {
                     <a className="nav-link text-dark" data-toggle="tab" href="#desserts"><h5>Desserts</h5></a>
                 </li>
             </ul>
- */}
+ } */}
 
         </>
 
