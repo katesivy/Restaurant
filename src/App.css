@@ -11,7 +11,7 @@ div #pic1 {
 
 
 a {
-  font-family: cursive;
+  /* font-family: cursive; */
   font-weight: normal;
   
 }
@@ -19,6 +19,9 @@ a {
 h4.card-title {
   font-family: cursive;
   font-weight: bolder;
+}
+h4 {
+  font-family: cursive;
 }
 
 .card {
