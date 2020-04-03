@@ -8,40 +8,65 @@ class Sides extends React.Component {
 
         };
     }
+    <div className="card text-center">
+    <div className="card-header">
+        <div className="card-body">
+            <h2 className="card-title">Appetizers</h2>
+           
+        </div>
+    </div>
+</div>
 
+<div className="card text-center">
+    <div className="card-header">
+        <div className="card-body">
+            <h2 className="card-title ">Mains</h2>
+            
+        </div>
+    </div>
+</div>
+
+<div className="card text-center">
+    <div className="card-header">
+        <div className="card-body">
+            <h2 className="card-title ">Soups & Salads</h2>
+            
+        </div>
+    </div>
+</div>
+
+<div className="card text-center">
+    <div className="card-header">
+        <div className="card-body">
+            <h2 className="card-title">Sides</h2>
+            
+        </div>
+    </div>
+</div>
+
+<div className="card text-center">
+    <div className="card-header">
+        <div className="card-body">
+            <h2 className="card-title ">Desserts</h2>
+
+        </div>
+    </div>
+</div>
+</>
+)
+}
 
     render() {
         return (
             <>
-               
-               
-/* <div className="card text-center">
+
+
+                <div className="card text-center">
                     <div className="card-header">
                         <div className="card-body">
                             <h2 className="card-title">Appetizers</h2>
                             <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-                        </div>
-                    </div>
-                </div>*/
-               
-
-                {/* <div className="row offset-2">
-                    <div className="col-sm-5 ">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Menu Item</h5>
-                                <p className="card-text">Ingredients</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-5">
-                        <div className="card ">
-                            <div className="card-body">
-                                <h5 className="card-title">Menu Item</h5>
-                                <p className="card-text">Ingredients:</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -54,25 +79,7 @@ class Sides extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="row offset-2">
-                    <div className="col-sm-5">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Menu Item</h5>
-                                <p className="card-text">Ingredients</p>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-5">
-                        <div className="card ">
-                            <div className="card-body">
-                                <h5 className="card-title">Menu Item</h5>
-                                <p className="card-text">Ingredients:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div className="card text-center">
                     <div className="card-header">
                         <div className="card-body">
@@ -82,25 +89,8 @@ class Sides extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="row offset-2">
-                    <div className="col-sm-5">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Menu Item</h5>
-                                <p className="card-text">Ingredients</p>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-5">
-                        <div className="card ">
-                            <div className="card-body">
-                                <h5 className="card-title">Menu Item</h5>
-                                <p className="card-text">Ingredients:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div className="card text-center">
                     <div className="card-header">
                         <div className="card-body">
@@ -110,25 +100,7 @@ class Sides extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="row offset-2">
-                    <div className="col-sm-5">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Menu Item</h5>
-                                <p className="card-text">Ingredients</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-5">
-                        <div className="card ">
-                            <div className="card-body">
-                                <h5 className="card-title">Menu Item</h5>
-                                <p className="card-text">Ingredients:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+              }
 
 
 
